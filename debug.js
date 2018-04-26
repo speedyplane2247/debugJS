@@ -20,3 +20,10 @@ debugJS.isFinite = function(num) {
         return true
     }
 }
+debugJS.isSecureContext = function() {
+    if (location.protocol == "https:") {
+        return true
+    } else {
+        return false
+    }
+}
