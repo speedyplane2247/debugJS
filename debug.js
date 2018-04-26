@@ -7,7 +7,7 @@ var debugJS = new Object();
 debugJS.isNaN = function(num) {
     temp = num.toString();
     temp2 = parseInt(temp)
-    if (temp2 > 0 || temp2 < 0) {
+    if (temp2 > 0 || temp2 < 0 || num == Infinity) {
         return false
     } else {
         return true
