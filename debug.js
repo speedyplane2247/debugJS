@@ -5,9 +5,16 @@ Under MIT license
 */
 var debugJS = new Object();
 debugJS.isNaN = function(num) {
+    temp = num.toString()
+    if (Number(temp) == NaN) {
+        return true
+    } else {
+        return false
+    }
+}
+debugJS.isFinite = function(num) {
     temp = num.toString();
-    temp2 = parseInt(temp)
-    if (temp2 > 0 || temp2 < 0 || num == Infinity) {
+    if (Number(temp) == Infinity || Number(temp) != NaN) {
         return false
     } else {
         return true
